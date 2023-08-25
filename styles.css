@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+     
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.slider, .colorPicker {
+    margin-bottom: 10px;
+}
+
+.shadowSet {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.value {
+    margin-left: 10px;
+}
+
+#preview {
+    margin-top:10%;
+     margin-right: 5%;
+    border: 1px solid #ccc;
+    width: 100%;max-width: 400px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+     
+}
+button{margin-top: 10px;font-size: 30px;}
+textarea {
+    width: 100%;
+}
