@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS HELPER</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<H1>CSS HELPER</H1>
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTool('tool1')">Box & Text shadow creator</button>
+        <button class="tab-button" onclick="showTool('tool2')">Pseudo-Class Visualizer</button>
+        <button class="tab-button" onclick="showTool('tool3')">CSS gradient generator </button>
+        <button class="tab-button" onclick="showTool('tool4')">CSS animation generator </button>
+        <button class="tab-button" onclick="showTool('tool5')">CSS button generator </button>
+    </div>
+
+    <div class="tools">
+        <div id="tool1" class="tool-content active">
+            <!-- Content of Tool 1 -->
+            <div class="container">
+                <h2>Box Shadow & Text Shadow Generator</h2>
+            
+                <div id="shadowControls">
+                   
+                     
+                        <div class="slider">
+                            <label>Horizontal Position:
+                            <input type="range" min="-50" max="50" value="5" class="horizontal">
+                            <span class="value" onchange="generateShadow()">5</span>
+                            </label>
+                        </div>
+            
+                        <div class="slider">
+                            <label>Vertical Position:
+                            <input type="range" min="-50" max="50" value="5" class="vertical">
+                            <span class="value" >5</span>
+                            </label>
+                        </div>
+            
+                        <div class="slider">
+                            <label>Blur Radius:
+                                <input type="range" min="0" max="50" value="5" class="blur">
+                                <span class="value">5</span>
+                                </label>
+                        </div>
+            
+                        <div class="slider">
+                            <label>Spread Radius: 
+                            <input type="range" min="0" max="50" value="1" class="spread">
+                            <span class="value">1</span>
+                            </label>
+                        </div>
+            
+                        <div class="colorPicker">
+                            <label for="colorpicker">Color Picker:</label>
+                            <input type="color" class="value" id="colorpicker" value="">
+                        </div>
+                    
+                </div>
+                <br> 
+                <label><input type="radio" name="shadowType" value="box" checked> Box Shadow</label>
+                <label><input type="radio" name="shadowType" value="text"> Text Shadow</label><br>
+                 
+                <!-- CSS Output -->
+                <h3>Generated CSS:</h3>
+                <textarea id="output" rows="4" cols="50" readonly></textarea>
+                <button onclick="copy()" style="font-size: 15px;">Copy</button>
+            </div>
+            
+            <!--Preview area-->
+            <div id="preview">
+               <h2>Preview</h2>
+            </div>
+            
+
+
+
+        </div>
+        
+        
+        <div id="tool2" class="tool-content">
+        <h1>tool 2 -- COMING SOON--</h1> 
+        </div>
+
+        <div id="tool3" class="tool-content">
+            <h1>tool 3 -- COMING SOON--</h1> 
+        </div>
+
+        <div id="tool4" class="tool-content">
+            <h1>tool 4 -- COMING SOON--</h1> 
+        </div>
+
+        <div id="tool5" class="tool-content">
+            <h1>tool 5 -- COMING SOON--</h1> 
+        </div>
+
+ 
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            👋I am here:
+            <a href="https://www.linkedin.com/in/a-sabari-nathan/" target="_blank" rel="noopener noreferrer">
+                <img src="./li.png" alt="LinkedIn Icon" class="social-icon">
+                LinkedIn
+            </a>
+            <a href="https://github.com/nath-techie" target="_blank" rel="noopener noreferrer">
+                <img src="./g.png" alt="GitHub Icon" class="social-icon">
+                 GitHub
+            </a>
+        </div>
+    </footer>
+    
+
+
+<script src="./script.js"></script>
+</body>
+</html>
