@@ -1,7 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    
+font-family: 'Kanit', sans-serif;
     /*background-color: #f4f4f4;*/
-    background-color: #FFFFE2;
+    
+   background-color: #eafef4;
     display: flex;
     flex-direction: column;
      
@@ -10,8 +13,8 @@ body {
     display: flex;
     margin-bottom: 5px;
 }
-
-h1,h2{margin:0;}
+h1{font-family: 'ADLaM Display', cursive;}
+h1,h2,h4{margin:0;}
 .tab-button {
     padding: 10px 15px;
     font-size: 15px;
@@ -20,6 +23,7 @@ h1,h2{margin:0;}
     background-color: hsl(0, 3%, 78%);
     margin-right: 5px;
     transition: background-color .3s;
+    border: solid 2px #000000;
 }
 
 .tab-button:hover {
@@ -37,24 +41,30 @@ h1,h2{margin:0;}
 .tool-content.active {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+padding-bottom: 30px;
     
 }
 .tool-content.active h1{display: block;}
 
-.container {
-    max-width: 600px;
+/* TOOL 1 */
+.container {box-sizing: border-box;
+    width: 450px;max-height: fit-content;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border: 2px solid black;
     margin-top: 2%;
     overflow:hidden ;
    
 }
 
-.slider, .colorPicker {
-    margin-bottom: 10px;
+.border-style{ margin-bottom: 10px;}
+
+.border-style,.border-slider,.slider, .colorPicker {
+    margin-top: 10px;
 }
 
 .shadowSet {
@@ -67,29 +77,51 @@ h1,h2{margin:0;}
     margin-left: 10px;
 }
 
-#preview {
+.preview-box {
+    width: 400PX;
+    height: 100px;
+    box-sizing: border-box; 
   background-color: white;
     margin: 10% 5%;
-    border: 1px solid #ccc;
-    width: 100%;max-width: 400px;
-    height: 100px;
-    line-height: 100px;
+    line-height: 50px;
+    border: 1px solid black;
     text-align: center;
-     
+    }
+    button{margin-top: 10px;font-size: 30px;
+    }
+
+.preview-box button{position: relative;top:20%}
+.preview-box button {
+    background-color: #65b0e2;
+    color: #ffffff;
+    border-radius: 12px;
+    border: 5px solid #2980b9;
+    font-size: 21px;
+    padding: 10 20;
+    cursor: pointer;
+    transition: background-color 0.3s;}
+.preview-box button:hover {
+    background-color: #7FCAFC;
 }
-button{margin-top: 10px;font-size: 30px;}
 textarea {
     width: 100%;
 }
 
 
 
+/* TOOL 3 */
+.btn-divs,.br-divs{padding: 10px;margin-top: 2px;}
+#br-preview{width:200px;height: 200px;background-color: #F4EE6C;
+    box-sizing: border-box;
+      margin: 10% 15%;      
+      text-align: center;}
 
 
 /*footer element */
 footer {
     background-color: #78fcb6;
     color: #000000;
+    border-top: 2px solid black;
     padding: 4px;
     font-family: Arial, sans-serif;
     position: fixed;

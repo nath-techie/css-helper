@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS HELPER</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@500&family=Kanit:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 <H1>CSS HELPER</H1>
     <div class="tabs">
         <button class="tab-button active" onclick="showTool('tool1')">Box & Text shadow creator</button>
-        <button class="tab-button" onclick="showTool('tool2')">Pseudo-Class Visualizer</button>
-        <button class="tab-button" onclick="showTool('tool3')">CSS gradient generator </button>
-        <button class="tab-button" onclick="showTool('tool4')">CSS animation generator </button>
-        <button class="tab-button" onclick="showTool('tool5')">CSS button generator </button>
+        <button class="tab-button" onclick="showTool('tool2')">Border</button>
+        <button class="tab-button" onclick="showTool('tool3')">Border radius</button>
+      <!--<button class="tab-button" onclick="showTool('tool4')">CSS gradient generator </button>
+        <button class="tab-button" onclick="showTool('tool5')">CSS animation generator </button> -->
+        <button class="tab-button" onclick="showTool('tool6')">CSS button generator </button>
+      <!--  <button class="tab-button" onclick="showTool('tool7')">Pseudo-Class Visualizer </button>  -->
     </div>
 
     <div class="tools">
-        <div id="tool1" class="tool-content active">
-            <!-- Content of Tool 1 -->
-            <div class="container">
+
+        <!--------- Tool 1 ------------->
+
+
+        <div id="tool1" class="tool-content active">   
+              <div class="container">
                 <h2>Box Shadow & Text Shadow Generator</h2>
-            
-                <div id="shadowControls">
+                   <div id="shadowControls">
                    
                      
                         <div class="slider">
@@ -55,7 +63,7 @@
             
                         <div class="colorPicker">
                             <label for="colorpicker">Color Picker:</label>
-                            <input type="color" class="value" id="colorpicker" value="">
+                            <input type="color" class="value" id="colorpicker" value="#000000">
                         </div>
                     
                 </div>
@@ -70,40 +78,244 @@
             </div>
             
             <!--Preview area-->
-            <div id="preview">
+            <div id="preview" class="preview-box">
                <h2>Preview</h2>
             </div>
-            
-
-
-
         </div>
         
-        
+
+        <!------------------ TOOL 2 ------------------->        
+
+
+
         <div id="tool2" class="tool-content">
-        <h1>tool 2 -- COMING SOON--</h1> 
+            <div class="container">
+                <h2>Border Generator</h2>
+                <div id="borderControls">
+                    <div class="border-slider">
+                        <label>Border width: 
+                        <input type="range" min="0" max="60" value="1" class="width">
+                        <span class="value">1</span>
+                        </label>
+                    </div>
+                    <br>
+                    <label for="border-style">Border style:</label>
+                    <select id="border-style" name="styles">
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge">ridge</option>
+                        <option value="inset">inset</option>
+                        <option value="onset">onset</option>
+                    </select>
+
+                    <br>
+                    <div class="colorPicker">
+                        <label for="colorpicker">Border Color Picker:</label>
+                        <input type="color" class="value" id="border-colorpicker" value="#000000">
+                    </div>
+
+                    <div class="colorPicker">
+                        <label for="colorpicker">Background Color Picker:</label>
+                        <input type="color" class="value" id="bg-colorpicker" value="#ffffff">
+                    </div>
+
+                    <h3>Generated CSS:</h3>
+                    <textarea id="border-output" rows="4" cols="50" readonly></textarea>
+                    <button onclick="copy()" style="font-size: 15px;">Copy</button>
+                </div>
+
+                </div>
+
+                <div id="border-preview" class="preview-box">
+                     Preview 
+                </div>
         </div>
+
+
+
+<!------------------- TOOL 3  ------------->        
 
         <div id="tool3" class="tool-content">
-            <h1>tool 3 -- COMING SOON--</h1> 
+            <div class="container">
+
+                    <h2>Border radius</h2>
+                    <div id="brControls">
+                         
+                        <div class="br-divs">
+                        <label>
+                            Top Left:
+                            <input type="range" id="topLeft" min="0" max="100" value="0">
+                            <span id="topLeftValue">0</span>
+                        </label>
+                        </div>
+
+                        <div class="br-divs">
+                        <label>
+                            Top Right:
+                            <input type="range" id="topRight" min="0" max="100" value="0">
+                            <span id="topRightValue">0</span>
+                        </label>
+                        </div>
+
+                        <div class="br-divs"> 
+                        <label>
+                            Bottom Right:
+                            <input type="range" id="bottomRight" min="0" max="100" value="0">
+                            <span id="bottomRightValue">0</span>
+                        </label>
+                        </div>
+
+                        <div class="br-divs">
+                        <label>
+                            Bottom Left:
+                            <input type="range" id="bottomLeft" min="0" max="100" value="0">
+                            <span id="bottomLeftValue">0</span>
+                        </label>
+                      </div>   
+                      <div class="br-output">
+                         
+                        <h3>Generated CSS:</h3>
+                        <textarea id="br-output" readonly></textarea>
+                        <button onclick="copy()" style="font-size: 15px;">Copy</button>
+                    </div>    
+
+                    
+                    </div>
+                    
+            </div>
+
+            <div id="br-preview" class="preview-box">
+                         Preview
+            </div>
+         
         </div>
+
+
+
+
+
+<!------------------- TOOL 4  ---------       
 
         <div id="tool4" class="tool-content">
             <h1>tool 4 -- COMING SOON--</h1> 
         </div>
 
+
+
+        ---------------- TOOL 5  ----------       
+
         <div id="tool5" class="tool-content">
             <h1>tool 5 -- COMING SOON--</h1> 
         </div>
 
- 
+---> 
+
+<!------------------- TOOL 6  ------------->        
+
+
+        <div id="tool6" class="tool-content">
+            <div class="container">
+                   <h2>CSS Button Generator</h2>
+                    <div id="btnControls">
+                        <div class="btn-divs">
+                        <label>
+                            Button Text:
+                            <input type="text" id="buttonText" value="Sample Button" />
+                        </label>
+                    </div>
+                    
+                            
+                            <div class="btn-divs">
+                                <label>
+                                    Background Color:
+                                    <input type="color" id="btn-bgColor" value="#65b0e2" />
+                                </label>
+                            </div>
+                    
+                            <div class="btn-divs">
+                                <label>
+                                    Font Color:
+                                    <input type="color" id="btn-fontColor" value="#ffffff" />
+                                </label>
+                            </div>
+
+                            <div class="btn-divs">
+                                <label>
+                                    Border Radius (px):
+                                    <input type="number" id="btn-borderRadius" value="12" />
+                                </label>
+                            </div>
+                            <div class="btn-divs">
+                                <label>
+                                    Border Color:
+                                    <input type="color" id="btn-borderColor" value="#2980b9" />
+                                </label>
+                            </div>
+                            <div class="btn-divs">
+                                <label>
+                                    Border Width (px):
+                                    <input type="number" id="btn-borderWidth" value="5" />
+                                </label>
+                            </div>
+                            <div class="btn-divs">
+                                <label>
+                                    Font Size (px):
+                                    <input type="number" id="btn-fontSize" value="21" />
+                                </label>
+                                </div>
+                            <div class="btn-divs">
+                            <label>
+                                Padding (px):
+                                <input type="text" id="btn-padding" value="10 20" />
+                            </label>
+                        </div> 
+                        <div>
+                            <h3>Generated CSS:</h3>
+                            <textarea id="btn-output" rows="12" cols="50" readonly></textarea>
+                            <button onclick="copy()" style="font-size: 15px;">Copy</button>
+                        </div>        
+                     
+                </div>
+            </div>
+            
+            <!-- Sample button preview -->
+            <div class="preview-box">
+                <button id="btn-preview">Sample button</button>
+            </div>
+            
+        </div>
+        
+        <!--  TOOL 7
+        <div id="tool7" class="tool-content">
+            <h1>tool 7 -- COMING SOON--</h1> 
+        </div>
+        -->
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer>
         <div class="footer-container">
-            👋I am here:
+            <h4>👋I am here:</h4>
             <a href="https://www.linkedin.com/in/a-sabari-nathan/" target="_blank" rel="noopener noreferrer">
-                <img src="./li.png" alt="LinkedIn Icon" class="social-icon">
+                <img src="./linkedin.png" alt="LinkedIn Icon" class="social-icon">
                 LinkedIn
             </a>
             <a href="https://github.com/nath-techie" target="_blank" rel="noopener noreferrer">
